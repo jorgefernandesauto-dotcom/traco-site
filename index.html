@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TRAÇO — Roupa de marca masculina. O teu estilo começa aqui.">
+<title>TRAÇO — Roupa de Marca Masculina</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a href="#" class="brand"><img src="traco-logo.png" alt="TRAÇO — Roupa de Marca Masculina"></a>
+  <nav>
+    <a href="#novidades">Novidades</a><a href="#marcas">Marcas</a><a href="#colecao">Coleção</a><a href="#sobre">Sobre</a>
+  </nav>
+  <button class="cart" onclick="toggleCart()">CARRINHO <b id="count">0</b></button>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span>TRAÇO / MEN'S WEAR</span>
+    <h1>O teu estilo<br><i>começa aqui.</i></h1>
+    <p>Roupa de marca masculina, selecionada para quem valoriza presença, qualidade e detalhe.</p>
+    <a class="cta" href="#colecao">VER COLEÇÃO</a>
+  </div>
+</section>
+
+<section id="marcas" class="brands">
+  <span>BOSS</span><span>CALVIN KLEIN</span><span>TOMMY HILFIGER</span><span>LACOSTE</span><span>EMPORIO ARMANI</span>
+</section>
+
+<section id="novidades" class="intro">
+  <small>NOVA COLEÇÃO</small>
+  <h2>As melhores marcas,<br>sempre contigo.</h2>
+  <p>Descobre as peças selecionadas pela TRAÇO.</p>
+</section>
+
+<section id="colecao" class="shop">
+  <div class="heading"><div><small>SHOP ONLINE</small><h2>Em destaque</h2></div>
+  <div class="filters"><button class="active" data-cat="Todos">Todos</button><button data-cat="T-shirts">T-shirts</button><button data-cat="Sweatshirts">Sweatshirts</button><button data-cat="Casacos">Casacos</button><button data-cat="Calças">Calças</button></div></div>
+  <div id="products" class="products"></div>
+</section>
+
+<section class="statement">
+  <div><small>TRAÇO</small><h2>Moda que<br><i>faz a diferença.</i></h2></div>
+  <p>Um espaço dedicado ao estilo masculino. Peças para o dia a dia, para sair e para marcar presença.</p>
+</section>
+
+<section id="sobre" class="about">
+  <small>SOBRE A MARCA</small>
+  <h2>TRAÇO</h2>
+  <p>O teu estilo começa aqui.</p>
+</section>
+
+<section class="newsletter">
+  <small>TRAÇO JOURNAL</small><h2>Fica por dentro.</h2>
+  <p>Recebe novidades, lançamentos e oportunidades exclusivas.</p>
+  <form onsubmit="event.preventDefault();alert('Obrigado! Ficaste na lista TRAÇO.');this.reset()">
+    <input type="email" required placeholder="O teu email"><button class="cta">ENTRAR</button>
+  </form>
+</section>
+
+<footer>
+  <img src="traco-logo.png" alt="TRAÇO">
+  <div><a href="#">Instagram</a><a href="#">TikTok</a><a href="mailto:contacto@traco.pt">contacto@traco.pt</a></div>
+  <p>© 2026 TRAÇO. Todos os direitos reservados.</p>
+</footer>
+
+<aside id="drawer"><div class="drawer-head"><h3>O teu carrinho</h3><button onclick="toggleCart()">×</button></div><div id="items"></div><div class="total"><span>Total</span><b id="total">0,00 €</b></div><button class="cta wide" onclick="checkout()">FINALIZAR ENCOMENDA</button></aside>
+<div id="veil" onclick="toggleCart()"></div>
+<script src="script.js"></script>
+</body>
+</html>
