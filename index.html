@@ -3,37 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="TRAÇO — Roupa de marca masculina. O teu estilo começa aqui.">
+<meta name="description" content="TRAÇO — Roupa de Marca Masculina. O teu estilo começa aqui.">
 <title>TRAÇO — Roupa de Marca Masculina</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-  <a href="#" class="brand"><img src="traco-logo.png" alt="TRAÇO — Roupa de Marca Masculina"></a>
-  <nav>
-    <a href="#novidades">Novidades</a><a href="#marcas">Marcas</a><a href="#colecao">Coleção</a><a href="#sobre">Sobre</a>
-  </nav>
+  <a href="#" class="brand"><img src="traco-logo.png" alt="TRAÇO"></a>
+  <nav><a href="#novidades">Novidades</a><a href="#marcas">Marcas</a><a href="#colecao">Coleção</a><a href="#sobre">Sobre</a></nav>
   <button class="cart" onclick="toggleCart()">CARRINHO <b id="count">0</b></button>
 </header>
 
 <section class="hero">
+  <div class="hero-overlay"></div>
   <div class="hero-copy">
-    <span>TRAÇO / MEN'S WEAR</span>
+    <span>TRAÇO / ROUPA DE MARCA MASCULINA</span>
     <h1>O teu estilo<br><i>começa aqui.</i></h1>
-    <p>Roupa de marca masculina, selecionada para quem valoriza presença, qualidade e detalhe.</p>
+    <p>As melhores marcas, selecionadas para quem valoriza qualidade, presença e detalhe.</p>
     <a class="cta" href="#colecao">VER COLEÇÃO</a>
   </div>
 </section>
 
-<section id="marcas" class="brands">
-  <span>BOSS</span><span>CALVIN KLEIN</span><span>TOMMY HILFIGER</span><span>LACOSTE</span><span>EMPORIO ARMANI</span>
-</section>
+<section id="marcas" class="brands"><span>BOSS</span><span>CALVIN KLEIN</span><span>TOMMY HILFIGER</span><span>LACOSTE</span><span>EMPORIO ARMANI</span></section>
 
-<section id="novidades" class="intro">
-  <small>NOVA COLEÇÃO</small>
-  <h2>As melhores marcas,<br>sempre contigo.</h2>
-  <p>Descobre as peças selecionadas pela TRAÇO.</p>
-</section>
+<section id="novidades" class="intro"><small>NOVA COLEÇÃO</small><h2>As melhores marcas,<br>sempre contigo.</h2><p>Escolhe as tuas peças e envia a encomenda diretamente pelo WhatsApp.</p></section>
 
 <section id="colecao" class="shop">
   <div class="heading"><div><small>SHOP ONLINE</small><h2>Em destaque</h2></div>
@@ -41,32 +34,26 @@
   <div id="products" class="products"></div>
 </section>
 
-<section class="statement">
-  <div><small>TRAÇO</small><h2>Moda que<br><i>faz a diferença.</i></h2></div>
-  <p>Um espaço dedicado ao estilo masculino. Peças para o dia a dia, para sair e para marcar presença.</p>
+<section class="how">
+  <small>COMO FUNCIONA</small><h2>Escolhe. Envia.<br><i>Recebe.</i></h2>
+  <div class="steps"><div><b>01</b><h3>Escolhe</h3><p>Adiciona as peças ao carrinho e confirma tamanhos.</p></div><div><b>02</b><h3>WhatsApp</h3><p>Envia a encomenda diretamente para a TRAÇO.</p></div><div><b>03</b><h3>MB WAY</h3><p>Recebe os dados de pagamento e paga por MB WAY.</p></div><div><b>04</b><h3>Entrega</h3><p>Combinamos contigo a entrega/envio da encomenda.</p></div></div>
 </section>
 
-<section id="sobre" class="about">
-  <small>SOBRE A MARCA</small>
-  <h2>TRAÇO</h2>
-  <p>O teu estilo começa aqui.</p>
-</section>
+<section class="statement"><div><small>TRAÇO</small><h2>Moda que<br><i>faz a diferença.</i></h2></div><p>Um espaço dedicado ao estilo masculino. Peças para o dia a dia, para sair e para marcar presença.</p></section>
 
-<section class="newsletter">
-  <small>TRAÇO JOURNAL</small><h2>Fica por dentro.</h2>
-  <p>Recebe novidades, lançamentos e oportunidades exclusivas.</p>
-  <form onsubmit="event.preventDefault();alert('Obrigado! Ficaste na lista TRAÇO.');this.reset()">
-    <input type="email" required placeholder="O teu email"><button class="cta">ENTRAR</button>
-  </form>
-</section>
+<section id="sobre" class="about"><small>SOBRE A MARCA</small><h2>TRAÇO</h2><p>O teu estilo começa aqui.</p></section>
 
-<footer>
-  <img src="traco-logo.png" alt="TRAÇO">
-  <div><a href="#">Instagram</a><a href="#">TikTok</a><a href="mailto:contacto@traco.pt">contacto@traco.pt</a></div>
-  <p>© 2026 TRAÇO. Todos os direitos reservados.</p>
-</footer>
+<section class="newsletter"><small>TRAÇO JOURNAL</small><h2>Fica por dentro.</h2><p>Recebe novidades, lançamentos e oportunidades exclusivas.</p><form onsubmit="event.preventDefault();alert('Obrigado! Ficaste na lista TRAÇO.');this.reset()"><input type="email" required placeholder="O teu email"><button class="cta">ENTRAR</button></form></section>
 
-<aside id="drawer"><div class="drawer-head"><h3>O teu carrinho</h3><button onclick="toggleCart()">×</button></div><div id="items"></div><div class="total"><span>Total</span><b id="total">0,00 €</b></div><button class="cta wide" onclick="checkout()">FINALIZAR ENCOMENDA</button></aside>
+<footer><img src="traco-logo.png" alt="TRAÇO"><div><a href="#">Instagram</a><a href="#">TikTok</a><a href="#" onclick="openWhatsApp();return false">WhatsApp</a></div><p>© 2026 TRAÇO. Todos os direitos reservados.</p></footer>
+
+<aside id="drawer">
+  <div class="drawer-head"><h3>O teu carrinho</h3><button onclick="toggleCart()">×</button></div>
+  <div id="items"></div>
+  <div class="total"><span>Total</span><b id="total">0,00 €</b></div>
+  <div class="paybox"><strong>Pagamento</strong><p>MB WAY</p><small>Depois de enviares a encomenda pelo WhatsApp, a TRAÇO envia-te os dados necessários para o pagamento.</small></div>
+  <button class="cta wide" onclick="sendWhatsApp()">ENVIAR ENCOMENDA POR WHATSAPP</button>
+</aside>
 <div id="veil" onclick="toggleCart()"></div>
 <script src="script.js"></script>
 </body>

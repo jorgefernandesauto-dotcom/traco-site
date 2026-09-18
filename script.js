@@ -1,3 +1,4 @@
+const WHATSAPP_NUMBER="351929479736"; // SUBSTITUIR pelo número WhatsApp da TRAÇO
 const products=[
 {id:1,name:"T-Shirt Essential",cat:"T-shirts",brand:"BOSS",price:49.90,img:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85"},
 {id:2,name:"T-Shirt Logo",cat:"T-shirts",brand:"Calvin Klein",price:54.90,img:"https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=900&q=85"},
@@ -16,6 +17,7 @@ function renderCart(){document.querySelector("#count").textContent=cart.reduce((
 function removeItem(id){cart=cart.filter(x=>x.id!==id);save()}
 function openCart(){document.querySelector("#drawer").classList.add("open");document.querySelector("#veil").classList.add("open")}
 function toggleCart(){document.querySelector("#drawer").classList.toggle("open");document.querySelector("#veil").classList.toggle("open");renderCart()}
-function checkout(){if(!cart.length)return alert("O carrinho está vazio.");alert("Checkout de demonstração. Na versão final ligamos pagamentos, morada e gestão de encomendas.")}
+function sendWhatsApp(){if(!cart.length)return alert("O carrinho está vazio.");if(WHATSAPP_NUMBER.includes("X"))return alert("Falta configurar o número de WhatsApp da TRAÇO no ficheiro script.js.");let msg="Olá TRAÇO! Quero fazer esta encomenda:%0A%0A"+cart.map(x=>`• ${x.name} — ${x.qty}x — ${eur(x.price*x.qty)}`).join("%0A")+"%0A%0ATotal: "+eur(cart.reduce((a,x)=>a+x.price*x.qty,0))+"%0A%0AQuero pagar por MB WAY.";window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+msg,"_blank")}
+function openWhatsApp(){if(WHATSAPP_NUMBER.includes("X"))return alert("Falta configurar o número de WhatsApp da TRAÇO.");window.open("https://wa.me/"+WHATSAPP_NUMBER,"_blank")}
 document.querySelectorAll(".filters button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filters button").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(b.dataset.cat)});
 render();renderCart();

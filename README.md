@@ -1,14 +1,22 @@
-# TRAÇO — Loja Online
-Site demonstrativo da marca TRAÇO, usando o logótipo enviado pelo proprietário.
+# TRAÇO — Loja Online V2
+
+Versão premium da loja TRAÇO.
+
+## Modelo de encomenda
+O cliente escolhe os produtos → abre o carrinho → envia a encomenda pelo WhatsApp → a TRAÇO fornece os dados necessários para pagamento por MB WAY → a entrega/envio é combinado com o cliente.
+
+## MUITO IMPORTANTE
+Antes de publicar a versão final, substituir no `script.js`:
+`351XXXXXXXXX`
+pelo número real de WhatsApp da TRAÇO, sem espaços nem `+`.
+
+Exemplo de formato: `351912345678`.
 
 ## Ficheiros
 - index.html
 - style.css
 - script.js
 - traco-logo.png
+- traco-hero.png
 
-## GitHub Pages
-Cria um repositório no GitHub, envia estes ficheiros para a raiz e ativa Settings → Pages → Deploy from branch → main/root.
-
-## Nota
-Os produtos e imagens atualmente são exemplos de demonstração. A fase seguinte pode substituir tudo pelos artigos reais e ligar pagamentos, stock, encomendas, portes e domínio próprio.
+Os produtos, preços e fotografias atuais são demonstrativos e devem ser substituídos pelos artigos reais.
